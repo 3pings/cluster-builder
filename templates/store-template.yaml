@@ -1,5 +1,5 @@
-- name: $cluster_name
-  cluster_vip: 10.10.182.47
+- name: cluster_name
+  cluster_vip: ip_address
   cluster_tags:
     - "type: reserve" # drive-thru, reserve,edge_host_uid combo
     - "vm-name: picard-edge-1"
