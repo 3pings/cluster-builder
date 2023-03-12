@@ -1,22 +1,19 @@
-- name: cluster_name
-  cluster_vip: ip_address
+- name: $clusterName
+  cluster_vip: $ipAddress
   cluster_tags:
-    - "type: reserve" # drive-thru, reserve,edge_host_uid combo
-    - "vm-name: picard-edge-1"
-    - "region: east"
+    - "location-id: $locationID" # drive-thru, reserve,edge_host_uid combo
   node_pools:
     - name: control-plane
       control_plane: true
       edge_host_uid:
-        # - "edge-d5b81a42d67559c0845ec8dcaa34555f" #gitops-1
-      - "edge-f9511a42a2cbf37290e5e2f52cf753f2" #gitops-2
+      - "edge-e06ad486715e4059e02848210b32f7e3" #gitops-2
   profiles:
     - name: ubuntu-k3s
-      tag: 1.25.2
+      tag: 1.24.6-2
       context: project
-    - name: edge-apps-web
-      tag: 2.5.0
-      context: project
+    # - name: edge-apps-web
+    #   tag: 2.5.0
+      # context: project
   rbac_bindings: []
   location:
     latitude: 39.952583
