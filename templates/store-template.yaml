@@ -1,12 +1,11 @@
 - name: $clusterName
   cluster_vip: $ipAddress
-  cluster_tags:
-    - "location-id: $locationId"
+  cluster_tags:[]
   node_pools:
     - name: control-plane
       control_plane: true
       edge_host_uid:
-      - "edge-e06ad486715e4059e02848210b32f7e3" #gitops-2
+      - "edge-b38351ec5eeda37c003148210b330aa3" #gitops-2
   profiles:
     - name: ubuntu-k3s
       tag: 1.24.6-2
