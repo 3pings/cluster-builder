@@ -1,0 +1,20 @@
+- name: $test2
+  cluster_vip: $2.2.2.3
+  cluster_tags:
+    - "location-id: $locationID" # drive-thru, reserve,edge_host_uid combo
+  node_pools:
+    - name: control-plane
+      control_plane: true
+      edge_host_uid:
+      - "edge-e06ad486715e4059e02848210b32f7e3" #gitops-2
+  profiles:
+    - name: ubuntu-k3s
+      tag: 1.24.6-2
+      context: project
+    # - name: edge-apps-web
+    #   tag: 2.5.0
+      # context: project
+  rbac_bindings: []
+  location:
+    latitude: 39.952583
+    longitude: -75.165222
