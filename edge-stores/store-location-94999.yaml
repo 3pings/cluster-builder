@@ -1,0 +1,19 @@
+- name: location-94999
+  cluster_vip: 192.168.1.240
+  cluster_tags:
+  node_pools:
+    - name: control-plane
+      control_plane: true
+      edge_host_uid:
+      - "edge-b38351ec5eeda37c003148210b330aa3" #gitops-2
+  profiles:
+    - name: ubuntu-k3s
+      tag: 1.24.6-2
+      context: project
+    # - name: edge-apps-web
+    #   tag: 2.5.0
+      # context: project
+  rbac_bindings: []
+  location:
+    latitude: 39.952583
+    longitude: -75.165222
