@@ -1,7 +1,7 @@
-- name: clusterName
-  cluster_vip: ipAddress
+- name: $clusterName
+  cluster_vip: $ipAddress
   cluster_tags:
-    - "location-id: locationID" # drive-thru, reserve,edge_host_uid combo
+    - "location-id: $locationID"
   node_pools:
     - name: control-plane
       control_plane: true
