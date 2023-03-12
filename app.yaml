@@ -15,7 +15,6 @@ metadata:
     #vault.hashicorp.com/agent-pre-populate-only: "false"
     # vault.hashicorp.com/path: "auth/jwt/login"
     # vault.hashicorp.com/auth-type: "jwt"
-      # vault.hashicorp.com/auth-config: "{path: \"bla\"}"
 spec:
   serviceAccountName: default
   containers:
