@@ -1,6 +1,6 @@
 - name: $clusterName
   cluster_vip: $ipAddress
-  cluster_tags:[]
+  cluster_tags:
   node_pools:
     - name: control-plane
       control_plane: true
