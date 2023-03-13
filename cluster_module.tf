@@ -27,8 +27,11 @@ module "edge" {
   skip_wait_for_completion = false
   cluster_tags             = each.value.cluster_tags
   cluster_vip              = each.value.cluster_vip
+  ntp_servers              = each.value.ntp_servers
   node_pools               = each.value.node_pools
   cluster_profiles         = each.value.profiles
   location                 = each.value.location
   rbac_bindings            = each.value.rbac_bindings
+  vault_role_names         = each.value.vault_role_names
+  jwt_path = "jwt/${each.value.name}"
 }

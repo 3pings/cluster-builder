@@ -7,7 +7,8 @@ data "spectrocloud_cluster_profile" "this" {
   context = each.value["context"]
 }
 data "spectrocloud_appliances" "this" {
-  for_each = { for pool in var.node_pools : pool.name => pool }
+  
+  for_each = { for pool in var.node_pools : pool.name => pool if pool.edge_host_uid == null}
   tags     = each.value["edge_host_tags"]
 }
 resource "spectrocloud_cluster_edge_native" "this" {

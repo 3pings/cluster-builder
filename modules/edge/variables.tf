@@ -89,3 +89,11 @@ variable "binding_role" {
   description = "Role binding type to be created with the cluster."
   default     = null
 }
+variable "vault_role_names" {
+  type = list(string)
+  description = "List of Strings role-names for vault secret access."
+}
+variable "jwt_path" {
+  type = string
+  description = "Authentication path in Vault."
+}

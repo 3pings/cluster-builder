@@ -8,7 +8,7 @@ metadata:
     vault.hashicorp.com/agent-inject: "true"
     vault.hashicorp.com/role: "devweb-app"
     vault.hashicorp.com/agent-inject-secret-credentials.txt: "secret/data/devwebapp/config"
-    vault.hashicorp.com/auth-path: "auth/jwt"
+    vault.hashicorp.com/auth-path: "auth/jwt/location-94999"
     # vault.hashicorp.com/auth-config-path: "auth/jwt/login"
     # vault.hashicorp.com/auth-config-role: "devweb-app"
     # vault.hashicorp.com/auth-type: "jwt"

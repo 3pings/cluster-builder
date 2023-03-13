@@ -27,7 +27,7 @@ resource "null_resource" "write_pem" {
 resource "vault_jwt_auth_backend" "this" {
   type = "jwt"
   jwt_validation_pubkeys = [data.local_file.pem_file.content]
-  # path = "demo"
+  path = var.jwt_path
 }
 
 resource "vault_jwt_auth_backend_role" "this" {
@@ -35,7 +35,7 @@ resource "vault_jwt_auth_backend_role" "this" {
   role_name                        = "devweb-app"
   bound_audiences = ["https://kubernetes.default.svc.cluster.local"]
   bound_subject = "system:serviceaccount:default:default"
-  token_policies = ["devwebapp"]
+  token_policies = var.vault_role_names
   user_claim = "sub"
   role_type       = "jwt"
 
