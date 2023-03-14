@@ -22,7 +22,7 @@
         name: cluster-admin
         kind: ClusterRole
       subjects:
-      - name: k8s-admin
+      - name: k8s-admins
         rbac_type: Group
   location:
     latitude: 32.834293
