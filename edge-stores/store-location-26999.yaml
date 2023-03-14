@@ -1,6 +1,7 @@
 - name: location-26999
   cluster_vip: 10.239.21.245
   cluster_tags:
+  ntp_servers:
   node_pools:
     - name: control-plane
       control_plane: true
@@ -13,6 +14,8 @@
     - name: edge-apps
       tag: 1.0.0
       context: project
+  vault_role_names:
+    - devweb-app
   rbac_bindings: 
     - rbac_type: ClusterRoleBinding
       rbac_role: 
