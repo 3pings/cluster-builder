@@ -31,3 +31,4 @@ terraform.tfvars
 # example: *tfplan*
 *.DS_Store
 app.yaml
+secret-app.yaml
