@@ -1,4 +1,4 @@
-- name: location-4987
+- name: location-3687
   cluster_vip: 10.239.21.244
   cluster_tags:
   ntp_servers:
