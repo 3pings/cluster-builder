@@ -1,12 +1,12 @@
-- name: location-3687
-  cluster_vip: 10.239.21.244
+- name: location-1827
+  cluster_vip: 10.239.21.246
   cluster_tags:
   ntp_servers:
   node_pools:
     - name: control-plane
       control_plane: true
       edge_host_uid:
-      - edge-95c23342d03e3f070e70d83bc2c576a8
+      - edge-41af33426162da7dbb3dcf80f58a4727
   profiles:
     - name: ubuntu-k3s
       tag: 1.24.6-2
@@ -24,6 +24,6 @@
       subjects:
       - name: k8s-admin
         rbac_type: Group
-  location:
-    latitude: 40.735657
-    longitude: -74.172363
+  location: 
+    latitude: 25.761681
+    longitude: -80.191788
