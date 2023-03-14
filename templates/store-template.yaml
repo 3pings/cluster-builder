@@ -5,14 +5,14 @@
     - name: control-plane
       control_plane: true
       edge_host_uid:
-      - "$uid"
+      - $uid
   profiles:
     - name: ubuntu-k3s
       tag: 1.24.6-2
       context: project
-    # - name: edge-apps-web
-    #   tag: 2.5.0
-      # context: project
+    - name: edge-apps
+      tag: 1.0.0
+      context: project
   rbac_bindings: 
     - rbac_type: ClusterRoleBinding
       rbac_role: 
