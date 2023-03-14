@@ -25,5 +25,5 @@
       - name: k8s-admin
         rbac_type: Group
   location:
-    latitude: 39.952583
-    longitude: -75.165222
+    latitude: 40.440624
+    longitude: -79.995888

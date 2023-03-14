@@ -2,7 +2,8 @@
 **/.terraform/*
 .terraform.lock.hcl
 .terraform/
-
+.vscode
+**/pipeDreamNode/
 # .tfstate files
 *.tfstate
 *.tfstate.*
