@@ -1,5 +1,5 @@
 locals {
-  edge_files = fileset("edge-stores", "store-*.yaml")
+  edge_files = fileset("edge-stores", "location-*.yaml")
 
   edge_list = try(yamldecode(join("\n", [for i in local.edge_files : file("edge-stores/${i}")])), [])
 

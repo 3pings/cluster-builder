@@ -15,7 +15,7 @@
       tag: 1.0.0
       context: project
   vault_role_names:
-    - devweb-app
+    - devwebapp
   rbac_bindings: 
     - rbac_type: ClusterRoleBinding
       rbac_role: 
