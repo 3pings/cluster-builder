@@ -11,7 +11,7 @@
 #     - name: ubuntu-k3s
 #       tag: 1.24.6-2
 #       context: project
-#     - name: edge-apps
+#     - name: edge-core-services
 #       tag: 1.0.0
 #       context: project
 #   vault_role_names:
