@@ -31,9 +31,7 @@ resource "spectrocloud_cluster_edge_native" "this" {
       control_plane           = machine_pool.value.control_plane
       control_plane_as_worker = machine_pool.value.control_plane == true ? true : false
       additional_labels       = machine_pool.value.pool_labels
-      edge_host {
       host_uids               = machine_pool.value.edge_host_uid != null ? machine_pool.value.edge_host_uid : data.spectrocloud_appliances.this[machine_pool.value.name].ids
-      }
     }
   }
   dynamic "cluster_profile" {
