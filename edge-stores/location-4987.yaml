@@ -1,29 +1,29 @@
-- name: location-4987
-  cluster_vip: 10.239.21.245
-  cluster_tags:
-  ntp_servers:
-  node_pools:
-    - name: control-plane
-      control_plane: true
-      edge_host_uid:
-      - edge-364433429a9b3a139f55993932f0d127
-  profiles:
-    - name: ubuntu-k3s
-      tag: 1.24.6-2
-      context: project
-    - name: edge-core-services
-      tag: 1.0.0
-      context: project
-  vault_role_names:
-    - devwebapp
-  rbac_bindings: 
-    - rbac_type: ClusterRoleBinding
-      rbac_role: 
-        name: cluster-admin
-        kind: ClusterRole
-      subjects:
-      - name: k8s-admins
-        rbac_type: Group
-  location:
-    latitude: 40.440624
-    longitude: -79.995888
+# - name: location-4987
+#   cluster_vip: 10.239.21.245
+#   cluster_tags:
+#   ntp_servers:
+#   node_pools:
+#     - name: control-plane
+#       control_plane: true
+#       edge_host_uid:
+#       - edge-364433429a9b3a139f55993932f0d127
+#   profiles:
+#     - name: ubuntu-k3s
+#       tag: 1.24.6-2
+#       context: project
+#     - name: edge-core-services
+#       tag: 1.0.0
+#       context: project
+#   vault_role_names:
+#     - devwebapp
+#   rbac_bindings: 
+#     - rbac_type: ClusterRoleBinding
+#       rbac_role: 
+#         name: cluster-admin
+#         kind: ClusterRole
+#       subjects:
+#       - name: k8s-admins
+#         rbac_type: Group
+#   location:
+#     latitude: 40.440624
+#     longitude: -79.995888
