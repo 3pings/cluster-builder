@@ -1,0 +1,29 @@
+- name: bridgeville
+  cluster_vip: 192.168.1.245
+  cluster_tags:
+  ntp_servers:
+  node_pools:
+    - name: control-plane
+      control_plane: true
+      edge_host_uid:
+      - edge-b38351ec5eeda37c003148210b330aa3
+  profiles:
+    - name: ubuntu-k3s
+      tag: 1.24.6
+      context: project
+    - name: edge-core-services
+      tag: 1.0.0
+      context: project
+  vault_role_names:
+    - devwebapp
+  rbac_bindings: 
+    - rbac_type: ClusterRoleBinding
+      rbac_role: 
+        name: cluster-admin
+        kind: ClusterRole
+      subjects:
+      - name: k8s-admins
+        rbac_type: Group
+  location:
+    latitude: 40.3472
+    longitude: -80.1153
