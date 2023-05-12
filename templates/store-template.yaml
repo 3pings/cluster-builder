@@ -9,7 +9,7 @@
       - $uid
   profiles:
     - name: ubuntu-k3s
-      tag: 1.24.6-2
+      tag: 1.24.6
       context: project
     - name: edge-core-services
       tag: 1.0.0
@@ -25,5 +25,5 @@
       - name: k8s-admins
         rbac_type: Group
   location:
-    latitude: 32.834293
-    longitude: -97.228905
+    latitude: $latitude
+    longitude: $longitude
