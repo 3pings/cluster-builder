@@ -12,9 +12,9 @@
     - name: ubuntu-k3s
       tag: 1.24.6
       context: project
-    # - name: williams-base
-    #   tag: 1.0.0
-    #   context: project
+    - name: williams-base
+      tag: 2.0.0
+      context: project
   vault_role_names:
     - devwebapp
   rbac_bindings: 
