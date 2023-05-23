@@ -4,7 +4,7 @@
 - name: store-501-pa-phil
   cluster_vip: 10.10.171.171
   cluster_tags:
-    - "type: reserve" # drive-thru, reserve,edge_host_uid combo
+    - "type: pump" # drive-thru, reserve,edge_host_uid combo
     - "stage: true"
     - "vm-name: picard-edge-1"
     - "region: east"
@@ -29,7 +29,7 @@
 - name: store-502-nj-newark
   cluster_vip: 10.10.171.172
   cluster_tags:
-    - "type: reserve" # drive-thru, reserve,edge_host_uid combo
+    - "type: pump" # drive-thru, reserve,edge_host_uid combo
     - "stage: true"
     - "vm-name: picard-edge-2"
     - "region: east"
@@ -54,7 +54,7 @@
 - name: store-503-pa-pit
   cluster_vip: 10.10.171.173
   cluster_tags:
-    - "type: reserve" # drive-thru, reserve,edge_host_uid combo
+    - "type: pipeline" # drive-thru, reserve,edge_host_uid combo
     - "stage: true"
     - "vm-name: picard-edge-3"
     - "region: east"
@@ -79,7 +79,7 @@
 - name: store-504-ga-atl
   cluster_vip: 10.10.171.174
   cluster_tags:
-    - "type: reserve" # drive-thru, reserve,edge_host_uid combo
+    - "type: pipeline" # drive-thru, reserve,edge_host_uid combo
     - "stage: true"
     - "vm-name: picard-edge-4"
     - "region: east"
@@ -106,7 +106,7 @@
 - name: store-505-fl-miami
   cluster_vip: 10.10.171.175
   cluster_tags:
-    - "type: reserve" # drive-thru, reserve,edge_host_uid combo
+    - "type: pump" # drive-thru, reserve,edge_host_uid combo
     - "stage: true"
     - "vm-name: picard-edge-5"
     - "region: east"
