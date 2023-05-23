@@ -1,29 +1,30 @@
-# - name: atlanta
-#   cluster_vip: 10.10.190.212
-#   cluster_tags:
-#   ntp_servers:
-#   node_pools:
-#     - name: control-plane
-#       control_plane: true
-#       edge_host_uid:
-#       - edge-020c38427a822c29e99d4b2ce37a755f
-#   profiles:
-#     - name: ubuntu-k3s
-#       tag: 1.24.6
-#       context: project
-#     - name: edge-core-services
-#       tag: 1.0.0
-#       context: project
-#   vault_role_names:
-#     - devwebapp
-#   rbac_bindings: 
-#     - rbac_type: ClusterRoleBinding
-#       rbac_role: 
-#         name: cluster-admin
-#         kind: ClusterRole
-#       subjects:
-#       - name: k8s-admins
-#         rbac_type: Group
-#   location:
-#     latitude: 33.753746
-#     longitude: -84.386330
+- name: atlanta
+  cluster_vip: 10.10.190.212
+  cluster_tags:
+    - "region:east"
+  ntp_servers:
+  node_pools:
+    - name: control-plane
+      control_plane: true
+      edge_host_uid:
+      - edge-ab4538425357690fd548f097ea21bbef
+  profiles:
+    - name: ubuntu-k3s
+      tag: 1.24.6
+      context: project
+    - name: williams-base
+      tag: 1.0.0
+      context: project
+  vault_role_names:
+    - devwebapp
+  rbac_bindings: 
+    - rbac_type: ClusterRoleBinding
+      rbac_role: 
+        name: cluster-admin
+        kind: ClusterRole
+      subjects:
+      - name: k8s-admins
+        rbac_type: Group
+  location:
+    latitude: 33.753746
+    longitude: -84.386330
