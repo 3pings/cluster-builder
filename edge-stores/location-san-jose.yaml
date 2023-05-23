@@ -1,13 +1,13 @@
-- name: denver
+- name: san-jose
   cluster_vip: 192.168.1.22
   cluster_tags:
-    - "region:central"
+    - "region:west"
   ntp_servers:
   node_pools:
     - name: control-plane
       control_plane: true
       edge_host_uid:
-      - edge-d83a7e13ebdd99de453d48210b330b96
+      - edge-e06ad486715e4059e02848210b32f7e3
   profiles:
     - name: ubuntu-k3s
       tag: 1.24.6
@@ -26,5 +26,5 @@
       - name: k8s-admins
         rbac_type: Group
   location:
-    latitude: 39.742043
-    longitude: -104.991531
+    latitude: 37.3394
+    longitude: -121.895
