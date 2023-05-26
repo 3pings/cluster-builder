@@ -1,5 +1,5 @@
 - name: $clusterName
-  cluster_vip: 192.168.1.30
+  cluster_vip: 10.100.100.31
   cluster_tags:
     - "region:east"
   ntp_servers:
@@ -7,15 +7,10 @@
     - name: control-plane
       control_plane: true
       edge_host_uid:
-      - edge-9ee68a9d23d34fb2a6feecf3c8323a31
-      - edge-4c78f90e91a94dfbb1f31af6aee1c2c8
-      - edge-1ff89d19417944cd800418fe3ca8ff3d
+      - $uid
   profiles:
     - name: ubuntu-k3s
       tag: 1.24.6
-      context: project
-    - name: williams-base
-      tag: 1.0.0
       context: project
   vault_role_names:
     - devwebapp
