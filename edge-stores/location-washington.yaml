@@ -1,30 +1,30 @@
-- name: washington
-  cluster_vip: 10.10.190.218
-  cluster_tags:
-    - "region:west"
-  ntp_servers:
-  node_pools:
-    - name: control-plane
-      control_plane: true
-      edge_host_uid:
-      - edge-cca838427a41fd8b02b12a6b4547538e
-  profiles:
-    - name: ubuntu-k3s
-      tag: 1.24.6
-      context: project
-    - name: williams-base
-      tag: 1.0.0
-      context: project
-  vault_role_names:
-    - devwebapp
-  rbac_bindings: 
-    - rbac_type: ClusterRoleBinding
-      rbac_role: 
-        name: cluster-admin
-        kind: ClusterRole
-      subjects:
-      - name: k8s-admins
-        rbac_type: Group
-  location:
-    latitude: 38.89511
-    longitude: -77.03637
+# - name: washington
+#   cluster_vip: 10.10.190.218
+#   cluster_tags:
+#     - "region:west"
+#   ntp_servers:
+#   node_pools:
+#     - name: control-plane
+#       control_plane: true
+#       edge_host_uid:
+#       - edge-cca838427a41fd8b02b12a6b4547538e
+#   profiles:
+#     - name: ubuntu-k3s
+#       tag: 1.24.6
+#       context: project
+#     - name: williams-base
+#       tag: 1.0.0
+#       context: project
+#   vault_role_names:
+#     - devwebapp
+#   rbac_bindings: 
+#     - rbac_type: ClusterRoleBinding
+#       rbac_role: 
+#         name: cluster-admin
+#         kind: ClusterRole
+#       subjects:
+#       - name: k8s-admins
+#         rbac_type: Group
+#   location:
+#     latitude: 38.89511
+#     longitude: -77.03637
