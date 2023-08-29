@@ -66,16 +66,14 @@ variable "skip_wait_for_completion" {
   type    = bool
   default = true
 }
-variable "location" {
-  type = object({
-    latitude  = optional(number)
-    longitude = optional(number)
-  })
-  default = {
-    latitude  = 0
-    longitude = 0
-  }
-  description = "Optional - If used Latitude and Longitude represent the coordinates of the location you wish to assign to the cluster.  https://www.latlong.net/ is one tool that can be used to find this."
+
+variable "latitude" {
+  type = number
+  default = 0
+}
+variable "longitude" {
+  type = number
+  default = 0
 }
 
 variable "binding_type" {

@@ -11,6 +11,8 @@ data "spectrocloud_appliances" "this" {
   for_each = { for pool in var.node_pools : pool.name => pool if pool.edge_host_uid == null}
   tags     = each.value["edge_host_tags"]
 }
+
+
 resource "spectrocloud_cluster_edge_native" "this" {
   name            = var.name
   tags            = var.cluster_tags
@@ -21,8 +23,8 @@ resource "spectrocloud_cluster_edge_native" "this" {
     ntp_servers = var.ntp_servers
   }
   location_config {
-    latitude  = var.location.latitude
-    longitude = var.location.longitude
+    latitude  = var.latitude
+    longitude = var.longitude
   }
   dynamic "machine_pool" {
     for_each = var.node_pools

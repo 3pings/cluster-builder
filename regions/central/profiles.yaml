@@ -1,0 +1,7 @@
+  profiles:
+    - name: ubuntu-k3s
+      tag: 1.25.2
+      context: project
+    - name: spectro-dashboard
+      tag: 1.0.0
+      context: project
