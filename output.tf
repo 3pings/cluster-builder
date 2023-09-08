@@ -1,3 +1,3 @@
-# output "edge" {
-#   value = local.edge
-# }
+output "locations" {
+    value = local.locations
+}

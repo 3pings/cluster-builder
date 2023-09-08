@@ -1,28 +1,21 @@
-# - name: atlanta
-#   cluster_vip: 10.10.190.222
-#   cluster_tags:
-#     - "region:east"
-#   ntp_servers:
-#   node_pools:
-#     - name: control-plane
-#       control_plane: true
-#       edge_host_uid:
-#       - edge-41ae384253807f598cb3b897a3cc2d78
-#   vault_role_names:
-#     - devwebapp
-#   rbac_bindings: 
-#     - rbac_type: ClusterRoleBinding
-#       rbac_role: 
-#         name: cluster-admin
-#         kind: ClusterRole
-#       subjects:
-#       - name: k8s-admins
-#         rbac_type: Group
-#   city_and_state: Atlanta, GA
-#   profiles:
-#     - name: ubuntu-k3s
-#       tag: 1.25.2
-#       context: project
-#     - name: spectro-dashboard
-#       tag: 1.0.0
-#       context: project
+- name: atlanta
+  cluster_vip: 10.10.190.222
+  cluster_tags:
+    - "region:east"
+  ntp_servers:
+  node_pools:
+    - name: control-plane
+      control_plane: true
+      edge_host_uid:
+      - edge-41ae384253807f598cb3b897a3cc2d78
+  vault_role_names:
+    - devwebapp
+  rbac_bindings: 
+    - rbac_type: ClusterRoleBinding
+      rbac_role: 
+        name: cluster-admin
+        kind: ClusterRole
+      subjects:
+      - name: k8s-admins
+        rbac_type: Group
+  city_and_state: Atlanta, GA
