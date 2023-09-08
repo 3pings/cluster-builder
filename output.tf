@@ -1,3 +1,3 @@
-output "locations" {
-    value = local.locations
-}
+# output "locations" {
+#     value = data.http.location
+# }

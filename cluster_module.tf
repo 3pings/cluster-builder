@@ -25,7 +25,11 @@ locals {
     }
   }
 }
+data "http" "location" {
+  for_each = local.locations
 
+  url = "https://nominatim.openstreetmap.org/search?q=${replace(each.value.city_and_state, " ", "+")}&format=json"
+}
 
 
 
@@ -38,26 +42,23 @@ resource "null_resource" "python_dependencies" {
   }
 }
 
-data "http" "location" {
-  for_each = local.locations
-
-  url = "https://nominatim.openstreetmap.org/search?q=${replace(each.value.city_and_state, " ", "+")}&format=json"
-}
-
 module "edge" {
   depends_on = [null_resource.python_dependencies]
 
-  source                   = "./modules/edge"
+  source  = "./modules/edge"
   for_each                 = local.locations
   name                     = each.value.name
   skip_wait_for_completion = false
   cluster_tags             = each.value.cluster_tags
   cluster_vip              = each.value.cluster_vip
   ntp_servers              = each.value.ntp_servers
-  node_pools               = each.value.node_pools
+  machine_pools            = each.value.machine_pools
   cluster_profiles         = each.value.profiles
-  latitude                 = local.coordinates[each.key].latitude
-  longitude                = local.coordinates[each.key].longitude
+  location = {
+      latitude                 = local.coordinates[each.key].latitude
+      longitude                = local.coordinates[each.key].longitude
+  }
+
   rbac_bindings            = each.value.rbac_bindings
   vault_role_names         = each.value.vault_role_names
   jwt_path = "jwt/${each.value.name}"

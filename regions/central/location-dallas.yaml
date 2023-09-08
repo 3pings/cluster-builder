@@ -3,11 +3,12 @@
   cluster_tags:
   - "region:south"
   ntp_servers:
-  node_pools:
+  machine_pools:
     - name: control-plane
       control_plane: true
-      edge_host_uid:
-      - BTWS22000258
+      control_plane_as_worker: true
+      edge_host:
+      - host_uid: edge-76453842cdb01cde3dd48db9952ec1b9
   vault_role_names:
     - devwebapp
   rbac_bindings: 

@@ -1,13 +1,14 @@
-- name: atlanta
+- name: san-jose
   cluster_vip: 10.10.190.223
   cluster_tags:
-    - "region:east"
+    - "region:west"
   ntp_servers:
-  node_pools:
+  machine_pools:
     - name: control-plane
       control_plane: true
-      edge_host_uid:
-      - edge-41ae384253807f598cb3b897a3cc2d78
+      control_plane_as_worker: true
+      edge_host:
+        - host_uid: edge-f62f38421f6d9dc2f40f9148aca3af69
   vault_role_names:
     - devwebapp
   rbac_bindings: 
