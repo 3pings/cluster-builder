@@ -10,7 +10,7 @@
       edge_host: 
         - host_uid: BTWS22000258
         - host_uid: BTWS220002A9
-        - host_uid: BTWS220002T5
+        - host_uid: BTWS220002T4
   vault_role_names:
     - devwebapp
   rbac_bindings: 
