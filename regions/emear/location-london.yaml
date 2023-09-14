@@ -1,0 +1,24 @@
+- name: london
+  cluster_vip: 10.100.100.40
+  cluster_tags:
+    - "region:emear"
+  ntp_servers:
+  machine_pools:
+    - name: control-plane
+      control_plane: true
+      control_plane_as_worker: true
+      edge_host: 
+        - host_uid: BTWS22000258
+        - host_uid: BTWS220002A9
+        - host_uid: BTWS220002T5
+  vault_role_names:
+    - devwebapp
+  rbac_bindings: 
+    - rbac_type: ClusterRoleBinding
+      rbac_role: 
+        name: cluster-admin
+        kind: ClusterRole
+      subjects:
+      - name: k8s-admins
+        rbac_type: Group
+  city_and_state: London, UK
