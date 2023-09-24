@@ -4,7 +4,7 @@ data "local_file" "pem_file" {
 }
 
 resource "local_file" "kubeconfig" {
-  content  = spectrocloud_cluster_edge_native.this.kubeconfig
+  content  = spectrocloud_cluster_edge_native.this.admin_kube_config
   filename = "kubeconfig_${local.cluster_id}"
 }
 
